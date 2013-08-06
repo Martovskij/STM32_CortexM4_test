@@ -233,10 +233,12 @@ uint32_t CPAL_TIMEOUT_UserCallback(CPAL_InitTypeDef* pDevInitStruct)
   * @param  pDevInstance.
   * @retval None
   */ 
-/*void CPAL_I2C_AF_UserCallback(CPAL_DevTypeDef pDevInstance)
+	
+void CPAL_I2C_AF_UserCallback(CPAL_DevTypeDef pDevInstance)
 {
    
-}*/
+	GPIO_SetBits(GPIOD,GPIO_Pin_12);
+}
 
 
 /*=========== Addressing Mode UserCallback ===========*/

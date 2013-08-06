@@ -424,7 +424,7 @@
 #define CPAL_I2C_BERR_UserCallback      (void)
 #define CPAL_I2C_ARLO_UserCallback      (void)
 #define CPAL_I2C_OVR_UserCallback       (void)
-#define CPAL_I2C_AF_UserCallback        (void)
+//#define CPAL_I2C_AF_UserCallback        (void)
 
 /* Transfer UserCallbacks : To use a Transfer callback comment the relative define */
 #define CPAL_I2C_TX_UserCallback        (void)    

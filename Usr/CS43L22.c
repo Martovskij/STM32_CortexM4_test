@@ -10,14 +10,14 @@ uint8_t rxBuffer[BUFFER_SIZE], txBuffer[BUFFER_SIZE];
 void DacInit()
 {
        dacRxStructure.pbBuffer = rxBuffer;
-	     dacRxStructure.wAddr1 = DAC_ADDR;
+	     dacRxStructure.wAddr1 = 0x28;
 	     
 	     dacTxStructure.pbBuffer = txBuffer;
-	     dacTxStructure.wAddr1 = DAC_ADDR;
+	     dacTxStructure.wAddr1 = 0x28;
 	
 	     CPAL_I2C_StructInit(&I2C1_DevStructure);
        I2C1_DevStructure.CPAL_Mode = CPAL_MODE_MASTER;
-	     
+	     //I2C1_DevStructure.pCPAL_I2C_Struct->
 	     I2C1_DevStructure.wCPAL_Options =  CPAL_OPT_NO_MEM_ADDR;
 	     I2C1_DevStructure.CPAL_ProgModel = CPAL_PROGMODEL_INTERRUPT;
 	     I2C1_DevStructure.pCPAL_I2C_Struct->I2C_ClockSpeed = 100000;
